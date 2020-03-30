@@ -1,16 +1,20 @@
 ● src
 +---● app
+|---+--● components
+|   |  |		
 |   +--● login
 |   |  |--login.component.ts|.html|.css
-|   +--● user-profile
-|   |  |--user-profile.component.ts|.html|.css
-|   +--●--customer
-|   +--●customer-details
-|   |  |--customer-details.component.ts|.html|.css
-|   +--●customer-information
-|   |  |--customer-information.component.ts|.html|.css
-|   +--●customer-proof
-|   |  |--customer-proof.component.ts|.html|.css
+|   +--● dashboard
+|   |  |--dashboard.component.ts|.html|.css
+|   +--● header
+|   |  |--header.component.ts|.html|.css
+|   +--●--subscriber
+|   +--●subscriber-id-proof
+|   |  |--subscriber-id-proof.component.ts|.html|.css
+|   +--●subscriber-details
+|   |  |--subscriber-details.component.ts|.html|.css
+|   +--●subscriber-information
+|   |  |--subscriber-information.component.ts|.html|.css
 |   +--●footer
 |   |  |--footer.component.ts|.html|.css
 |   |  ●not-found
