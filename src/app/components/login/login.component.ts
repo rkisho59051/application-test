@@ -11,7 +11,7 @@ import { UserService } from 'src/app/shared/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  firstName :string;
+  // firstName :string;
   model ={
     email:'',
     password:''
@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     // debugger;
     this.userService.login(form.value).subscribe(res =>{
       this.userService.setToken(res['token']);
+      this.router.navigateByUrl('/dashboard');
     //    this.userService.getSubscriptionDetails().subscribe(res=>{
     //   console.log('subscription'+res);
     // })
@@ -35,7 +36,7 @@ export class LoginComponent implements OnInit {
         this.userService.sendUserInfo(res);
         // console.log(res['data']['first_name']);
        
-        this.router.navigateByUrl('/dashboard');
+       
         // this.model.firstName = res[]
         // this.userService.firstName.subscribe(data => data=res['data']['first_name']);
         

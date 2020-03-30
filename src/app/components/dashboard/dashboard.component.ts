@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/shared/user.service';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
 
   designation:string;
   userName:any;
@@ -23,20 +23,17 @@ export class DashboardComponent implements OnInit {
   avghandlingtime:string;
   subscription:Subscription;
   constructor(private userService:UserService, private router:Router) { 
-    setTimeout(() => {
-      // this.userService.getUserInfo().subscribe(data=>{
-      //   // console.log(data.data['first_name']);
-        
-      //   this.firstName = data.data['first_name']
-      //   console.log('firstname' +this.firstName);});
-    }, 10);
-  }
-  ngAfterViewInit() {
+      this.userService.getUserInfo().subscribe(data=>{
+        this.firstName = data.data['first_name']
+        console.log('firstname ' +this.firstName);});
   
   }
+  
 
   ngOnInit() {
-    this.firstName = 'John Doe';
+    console.log('for our reference ' +this.firstName);
+
+    // this.firstName = 'John Doe';
     // console.log(this.firstName);
     
     
@@ -55,6 +52,10 @@ export class DashboardComponent implements OnInit {
   // this.firstName = 'ABC';
   this.designation= 'Data Executive';
 }
+
+ngAfterViewInit() {
+  console.log('for our reference ' +this.firstName);
+}
 available() {
   
   if(this.timeAvail > 0) {
@@ -62,7 +63,7 @@ available() {
     this.timeAvail = 0;
     this.timeAvailMin = 0;
    
-  }else
+  } else
   this.interval = setInterval(() => {
     if(this.timeAvail < 59) {
       this.timeAvail++;
