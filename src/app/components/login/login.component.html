@@ -1,30 +1,36 @@
 <div class="container col-md-6">
+  <div style="text-align: center" class="col-md-12">
     <img class="airtel_image img-fluid" src="../../assets/img/airtel_logo.png" alt="Responsive image"/><br>
-           <img class="airtel_plan_image img-fluid" src="../../assets/img/airtel_plan_2.PNG"  alt="Responsive image" alt="First slide">
+  </div>       
+    <img class="airtel_plan_image img-fluid" src="../../assets/img/airtel_plan_2.PNG"  alt="Responsive image" alt="First slide">
  </div>
  <div class="container col-md-6">
-     <div >
+     <div class="col-md-12" style="text-align: center;">
          <img class="user_image" src="../../assets/img/user_image.png" id="icon" alt="User Icon" />
        </div><br>
         <form #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)"> 
-            
+            <div class="col-md-12">
          <input type="text" class="form-control" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email" [pattern]="emailRegex" required [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }">
-    
-         <div *ngIf="signInForm.submitted && email.errors?.pattern">
+        </div>
+         <div class="col-md-12"  *ngIf="email.errors?.pattern">
            <label class="validation-message">Invalid email address.</label>
          </div>
          <br>
+         <div class="col-md-12">
          <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="model.password" placeholder="Password" required minlength="4"[ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }">
-     
+        </div>
          <div *ngIf="signInForm.submitted && password.errors?.minlength">
            <label class="validation-message">Minimum 4 characters.</label>
          </div><br>
+         <div style="text-align: center;">
          <input type="submit" value="Sign In">
+        </div>
        </form> 
+
        <div *ngIf="serverErrorMessages">
          {{serverErrorMessages}}
          </div>
- </div>
- 
+        
+        </div>
  
  
