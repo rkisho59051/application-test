@@ -1,0 +1,41 @@
+.container {
+    border:1px solid lightgray;
+    box-shadow: lightgray;
+    width:70rem;
+    height:69rem;
+    overflow:scroll;
+}
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+}
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;                
+    background-color:lightgray;
+    height: 1px;
+}
+
+#line {
+    float: left;
+    width: 1920px;
+    height: 40px;                
+}
+
+/* .identity_card {
+    width:40rem;
+    height:30rem;
+} */

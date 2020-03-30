@@ -1,0 +1,81 @@
+label {
+    color:#37c6ff;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .reject_button {
+    width:15rem;
+    height:4rem;
+    border-radius:10px;
+    background:white;
+    color:#00003f;
+    font-weight: 600;
+    }
+    .approve_button {
+        width:15rem;
+        height:4rem;
+        border-radius:10px;
+        background:white;
+    color:#00003f;
+    font-weight: 600;
+    }
+    .reject_button:hover {
+        width:15rem;
+        height:4rem;
+        border-radius:10px;
+        background:#00003f;
+        color:white;
+        font-weight: 600;
+        }
+        .approve_button:hover {
+        width:15rem;
+        height:4rem;
+        border-radius:10px;
+        background:#00003f;
+        color:white;
+        font-weight: 600;
+        }
+        .minutes {
+            color:red;
+            
+            padding:3px 5px 3px 5px;
+            border:1px solid lightgray;
+        }
+        .seconds {
+            color:red;
+            padding:3px 5px 3px 5px ;
+            border:1px solid lightgray;
+        }
+        .container {
+            width:70rem;
+            height:50rem;
+            overflow: scroll;
+
+        }
+        ::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+}
+.container {
+    border:1px solid lightgray;
+    border-radius:5px;
+    box-shadow: 2px 2px lightgray;
+}
