@@ -1,1 +1,33 @@
-<router-outlet></router-outlet>
+<div class="col-md-1">
+    <div class="navbar">
+        <ul>
+            <li>
+                <span appCursor class="material-icons"> toc</span>
+            </li>
+            <li>
+                <span appCursor (click)="userLogin()" class="material-icons">
+                    account_circle
+                    </span>
+            </li>
+            <li>
+                <span appCursor class="material-icons">
+                    view_module
+                    </span>
+            </li>
+            <li>
+                <span appCursor class="material-icons">
+                    select_all
+                    </span>
+            </li>
+            <li>
+                <span appCursor (click)="howItWorks()" class="material-icons">
+                    live_help
+                    </span>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+<div class="col-md-11">
+    <router-outlet></router-outlet>
+</div>

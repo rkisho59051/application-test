@@ -14,6 +14,7 @@ import { SubscriberIdProofComponent } from './components/subscriber/subscriber-i
 import { SubscriberDetailsComponent } from './components/subscriber/subscriber-details/subscriber-details.component';
 import { SubscriberInformationComponent } from './components/subscriber/subscriber-information/subscriber-information.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HeaderComponent } from './components/header/header.component';
     SubscriberIdProofComponent,
     SubscriberDetailsComponent,
     SubscriberInformationComponent,
-    HeaderComponent
+    HeaderComponent,
+    HowItWorksComponent
   ],
   imports: [
     BrowserModule,

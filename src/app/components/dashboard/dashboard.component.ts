@@ -23,14 +23,16 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   avghandlingtime:string;
   subscription:Subscription;
   constructor(private userService:UserService, private router:Router) { 
-      this.userService.getUserInfo().subscribe(data=>{
-        this.firstName = data.data['first_name']
-        console.log('firstname ' +this.firstName);});
+      // this.userService.getUserInfo().subscribe(data=>{
+      //   this.firstName = data.data['first_name']
+      //   console.log('firstname ' +this.firstName);});
   
   }
   
 
   ngOnInit() {
+    this.userService.getUserInfo().subscribe(data=>{
+      this.firstName = data.data['first_name']});
     console.log('for our reference ' +this.firstName);
 
     // this.firstName = 'John Doe';
