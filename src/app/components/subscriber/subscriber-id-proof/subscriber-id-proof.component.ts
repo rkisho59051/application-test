@@ -1,5 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
+// declare var $:any;
+
 @Component({
   selector: 'app-subscriber-id-proof',
   templateUrl: './subscriber-id-proof.component.html',
@@ -41,8 +43,8 @@ export class SubscriberIdProofComponent implements OnInit {
     }
     
    }
-   frontRotate($event) {
-  
+   frontRotate(event) {
+   
    }
    backRotate(event) {
     

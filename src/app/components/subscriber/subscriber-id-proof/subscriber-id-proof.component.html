@@ -1,17 +1,17 @@
 <div class="container" style="text-align: center;">
     <h6>ID Image Front</h6>
    
-    <img #front class="identity_card" src="../../../../assets/img/image_front.PNG" width="{{frontWidth}}" height="{{frontHeight}}"/>
+    <img #front id="front" class="identity_card" src="../../../../assets/img/image_front.PNG" style="transform: rotate(0deg)" width="{{frontWidth}}" height="{{frontHeight}}"/>
     <div>
     <span appCursor class="material-icons" (click)="frontZoomOut(front)" >zoom_in</span>
     <span appCursor class="material-icons" (click)="frontZoomIn(front)">zoom_out</span>
-    <span appCursor class="material-icons" (click)="frontRotate(front)">cached</span></div>
+    <!-- <span appCursor class="material-icons" (click)="frontRotate(front)">cached</span></div> -->
     <h6 >ID Image Back</h6>
-    <img #back class="identity_card" src="../../../../assets/img/image_back.PNG" width="{{backWidth}}" height="{{backHeight}}"/>
+    <img #back id="back" class="identity_card" src="../../../../assets/img/image_back.PNG" width="{{backWidth}}" height="{{backHeight}}"/>
     <div>
         <span appCursor class="material-icons" (click)="backZoomOut(back)">zoom_in</span>
         <span class="material-icons" appCursor (click)="backZoomIn(back)">zoom_out</span>
-        <span appCursor class="material-icons" (click)="backRotate(back)">cached</span></div>
+        <!-- <span appCursor class="material-icons" (click)="backRotate(back)">cached</span></div> -->
     <h6 >Face Photo</h6>
     <img class="identity_card" src="../../../../assets/img/image_front.PNG" width="500" height="250"/>
     <div id="line"><hr/></div>

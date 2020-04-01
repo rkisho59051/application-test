@@ -26,14 +26,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       // this.userService.getUserInfo().subscribe(data=>{
       //   this.firstName = data.data['first_name']
       //   console.log('firstname ' +this.firstName);});
+      this.userService.getUserInfo().subscribe(data=>{
+        this.firstName = data.data['first_name']});
+      console.log('for our reference ' +this.firstName);
   
   }
   
 
   ngOnInit() {
-    this.userService.getUserInfo().subscribe(data=>{
-      this.firstName = data.data['first_name']});
-    console.log('for our reference ' +this.firstName);
+    
 
     // this.firstName = 'John Doe';
     // console.log(this.firstName);
